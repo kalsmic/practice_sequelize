@@ -1,0 +1,13 @@
+{
+  "name": "practice_sequelize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Arthur",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.17.1"
+  }
+}
