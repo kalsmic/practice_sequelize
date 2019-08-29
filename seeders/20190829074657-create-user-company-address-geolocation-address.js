@@ -2,7 +2,7 @@
 
 const users = require("../json/users.json");
 
-const sqlQuery = ({name, username, email, address,phone, website, company}) => `
+const sqlQuery = ({id, name, username, email, address,phone, website, company}) => `
 DO $$
 
 DECLARE companyId INTEGER;
@@ -16,8 +16,8 @@ INSERT INTO "GeoLocations" ("lat", "lng") VALUES
 INSERT INTO "Addresses" ("street", "suite", "city", "zipcode","geoLocationId") VALUES
 ('${address.street}', '${address.suite}', '${address.city}', '${address.zipcode}', geoLocationId)
 RETURNING "id" INTO addressId;
-INSERT INTO "Users" ("name", "username", "email", "addressId", "phone", "website" ,"companyId") VALUES
-('${name}', '${username}', '${email}', addressId, '${phone}', '${website}', companyId);
+INSERT INTO "Users" ("id","name", "username", "email", "addressId", "phone", "website" ,"companyId") VALUES
+('${id}','${name}', '${username}', '${email}', addressId, '${phone}', '${website}', companyId);
 
 END $$`;
 
@@ -34,6 +34,6 @@ module.exports = {
     await queryInterface.bulkDelete('Users');
     await queryInterface.bulkDelete('Company');
     await queryInterface.bulkDelete('Addresses');
-    await queryInterface.bulkDelete('Geolocation');
+    await queryInterface.bulkDelete('GeoLocations');
   }
 };

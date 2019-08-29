@@ -4,24 +4,20 @@
     "password": "RayaNd019.",
     "database": "database_development",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "RayaNd019.",
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false,
-    "timestamps": true
+    "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "RayaNd019.",
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   }
 }

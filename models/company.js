@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Company.associate = function(models) {
     Company.belongsToMany(models.User)
-    // associations can be defined here
   };
   return Address;
 };
